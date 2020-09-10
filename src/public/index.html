@@ -3,13 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <title>Chat Service</title>
 </head>
 <body>   
 
-    <h1>Aqui va la sala de chat</h1>
+    <nav class="navbar navbar-light bg-warning">
+        <a class="navbar-brand mx-auto" href="/">Chat with Javascript</a>
+    </nav>
+
+
+    <!--Container para la ventana-->
+    <div class="contianer">
+        <div class="col-md-6 mt-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Chat</h4>
+                </div>
+                <!--ventana de mensajes-->
+                <div id="chat" class="card-body"></div>
+
+                <!--pie de ventana de mensajes-->
+                <div class="card-footer">
+                    <form id="msgForm"class="card-footer">
+                        <div class="input-group">
+                            <input type="text" id="message" class="form-control">
+                            <div class="input-group-append">
+                                <input type="submit" class="btn btn-warning">
+                            </div>
+                        </div>                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 <!--scripts js-->
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./socket.io/socket.io.js" charset="UTF-8"></script>
 <script src="./js/main.js"></script>
 

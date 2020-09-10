@@ -13,12 +13,11 @@ require('./sockets')(io);
 
 
 //settings
+app.set('port', process.env.PORT || 5000)
 /*permite que se encuentre la direccion de los archivos estaticos necesarios para la aplicación*/
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
 //inicia el servidor
-server.listen(3000, () => {
-    console.log('Servidor activo en el puerto 3000');
+server.listen(app.get('port'), () => {
+    console.log('Servidor activo en el puerto', app.get('port'));
 });
